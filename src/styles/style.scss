@@ -1,0 +1,34 @@
+:root {
+    --primary: #6979f8;
+    --primary-hover: #a5affb;
+    --second:#BE52F2;
+    --second-hover: #DBA5F5;
+    --success:#00C48C;
+    --success-hover:#7DDFC3;
+    --info:#0084F4;
+    --info-hover:#66B5F8;
+    --warning:#FFA268;
+    --warning-hover:#FFC7A6;
+    --danger:#FF647C;
+    --danger-hover:#FDAFBB;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.line {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    &_block{
+        display: block;
+    }
+}
