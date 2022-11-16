@@ -1,1 +1,1 @@
-# trading-project
+# Vue UIKit + i18n
