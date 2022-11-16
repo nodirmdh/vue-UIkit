@@ -1,6 +1,8 @@
 <script setup>
 import {ref} from 'vue';
+import { useI18n } from 'vue-i18n';
 
+const { t, locale } = useI18n({ useScope: "global" })
 const props = defineProps({
     openSidebar: {
         type: Boolean,
@@ -9,12 +11,14 @@ const props = defineProps({
 })
 
 const links = ref([
-    {name: 'Typography', href: '/typography'},
-    {name: 'Button', href: '/button'},
-    {name: 'Checkbox', href: '/checkbox'},
-    {name: 'Radiobutton', href: '/radiobutton'},
-    {name: 'Progress', href: '/progress'},
-    {name: 'Inputs', href: '/inputs'},
+    {name: t('Typography'), href: '/typography'},
+    {name: t('Button'), href: '/button'},
+    {name: t('Checkbox'), href: '/checkbox'},
+    {name: t('Radiobutton'), href: '/radiobutton'},
+    {name: t('Progress'), href: '/progress'},
+    {name: t('Inputs'), href: '/inputs'},
+    {name: t('Tabs'), href: '/tabs'},
+    {name: t('Table'), href: '/table'},
 ])
 
 </script>

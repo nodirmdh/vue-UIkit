@@ -18,10 +18,10 @@ const disabledRadioChecked = ref(true)
 </script>
 
 <template>
-  <h1 class="heading-1">Radiobutton</h1>
-  <h2 class="heading-2">Basic</h2>
+  <h1 class="heading-1">{{$t('Radiobutton')}}</h1>
+  <h2 class="heading-2">{{$t('Basic')}}</h2>
   <div class="line line_block">
-    <p>Selected Club: {{selectedClub}}</p>
+    <p>{{$t('Selected Club')}}: {{selectedClub}}</p>
     <div v-for="club in footballClubs" :key="club.id">
       <app-radiobutton 
       :value="club.name" 
@@ -31,11 +31,11 @@ const disabledRadioChecked = ref(true)
       v-model:checkedValue="selectedClub" />
     </div>
   </div>
-  <h2 class="heading-2">Disabled</h2>
+  <h2 class="heading-2">{{$t('Disabled')}}</h2>
   <div class="line">
     <app-radiobutton 
     value="Radiobutton Disabled" 
-    label="Radiobutton Disabled" 
+    :label="$t('Radiobutton Disabled')" 
     id="RadiobuttonDisabled" 
     name="RadiobuttonDisabled"
     :disabled="disabledRadio"

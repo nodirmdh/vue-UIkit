@@ -1,11 +1,12 @@
 <template>
-  <h1 class="heading-1">Typography</h1>
-  <h1 class="heading-1">Heading 1</h1>
-  <h2 class="heading-2">Heading 2</h2>
-  <h2 class="heading-3">Heading 3</h2>
+  <h1 class="heading-1">{{$t('Typography')}}</h1>
+  <h1 class="heading-1">{{$t('Heading')}} 1</h1>
+  <h2 class="heading-2">{{$t('Heading')}} 2</h2>
+  <h2 class="heading-3">{{$t('Heading')}} 3</h2>
 </template>
 
 <script setup>
+
 
 </script>
 

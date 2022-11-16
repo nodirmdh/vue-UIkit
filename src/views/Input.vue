@@ -3,7 +3,7 @@ import {ref, computed} from 'vue'
 import useVuelidate from '@vuelidate/core'
 import {helpers, minLength, maxLength, numeric, email, sameAs} from '@vuelidate/validators'
 
-import Input from '@/components/Input.vue'
+import Input from '@/components/AppInput.vue'
 import Button from '@/components/AppButton.vue'
 
 const nameField = ref('')
@@ -44,52 +44,52 @@ const submitForm = () => {
 </script>
 
 <template>
-  <h1 class="heading-1">Inputs</h1>
+  <h1 class="heading-1">{{$t('Inputs')}}</h1>
 
   <form @submit.prevent="submitForm">
     <Input
-      label="Your name"
+      :label="$t('Your name')"
       name="name"
-      placeholder="Input your name"
+      :placeholder="$t('Input your name')"
       v-model:value="v.nameField.$model"
       :error="v.nameField.$errors"/>
       
     <Input
-      label="Your email"
+      :label="$t('Your email')"
       name="email"
-      placeholder="Input your email"
+      :placeholder="$t('Input your email')"
       v-model:value="v.emailField.$model"
       :error="v.emailField.$errors"/>
       
     <Input
-      label="Your lucky number"
+      :label="$t('Your lucky number')"
       name="lucky"
-      placeholder="Input your lucky number"
+      :placeholder="$t('Input your lucky number')"
       v-model:value="v.luckyField.$model"
       :error="v.luckyField.$errors"/>
       
     <Input
-      label="Your password"
+      :label="$t('Your password')"
       name="password"
-      placeholder="Please input password"
+      :placeholder="$t('Please input password')"
       v-model:value="passwordField"
       type="password"/>
       
     <Input
-      label="Confirm password"
+      :label="$t('Confirm password')"
       name="confirm"
-      placeholder="Please confirm password"
+      :placeholder="$t('Please confirm password')"
       v-model:value="v.confirmPasswordField.$model"
       :error="v.confirmPasswordField.$errors"
       type="password"/>
 
     <Input
-      label="Frontend string"
+      :label="$t('Frontend string')"
       name="frontend"
-      placeholder="Input string with frontend"
+      :placeholder="$t('Input string with frontend')"
       v-model:value="v.frontendField.$model"
       :error="v.frontendField.$errors"/>
 
-    <Button label="Submit" color="primary"></Button>
+    <Button :label="$t('Submit')" color="primary"></Button>
   </form>
 </template>

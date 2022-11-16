@@ -7,8 +7,8 @@ const eventForBtn = () => {
 </script>
 
 <template>
-    <h1 class="heading-1">Button</h1>
-    <h2 class="heading-2">Colors</h2>
+    <h1 class="heading-1">{{$t('Button')}}</h1>
+    <h2 class="heading-2">{{$t('Colors')}}</h2>
     <div class="line">
         <app-button label="Primary" color="primary" />
         <app-button label="Secondary" color="second" />
@@ -17,7 +17,7 @@ const eventForBtn = () => {
         <app-button label="Warning" color="warning" />
         <app-button label="Danger" color="danger" />
     </div>
-    <h2 class="heading-2">Rounded</h2>
+    <h2 class="heading-2">{{$t('Rounded')}}</h2>
     <div class="line">
         <app-button label="Primary" color="primary" rounded />
         <app-button label="Secondary" color="second" rounded />
@@ -26,7 +26,7 @@ const eventForBtn = () => {
         <app-button label="Warning" color="warning" rounded />
         <app-button label="Danger" color="danger" rounded />
     </div>
-    <h2 class="heading-2">Disabled</h2>
+    <h2 class="heading-2">{{$t('Disabled')}}</h2>
     <div class="line">
         <app-button label="Primary" color="primary" disabled />
         <app-button label="Secondary" color="second" disabled />
@@ -36,7 +36,7 @@ const eventForBtn = () => {
         <app-button label="Danger" color="danger" disabled />
     </div>
    
-    <h2 class="heading-2">Outlined</h2>
+    <h2 class="heading-2">{{$t('Outlined')}}</h2>
     <div class="line">
         <app-button label="Primary" color="primary" :outlined="true" />
         <app-button label="Secondary" color="second" :outlined="true" />
@@ -45,7 +45,7 @@ const eventForBtn = () => {
         <app-button label="Warning" color="warning" :outlined="true" />
         <app-button label="Danger" color="danger" :outlined="true" />
     </div>
-    <h2 class="heading-2">Icon</h2>
+    <h2 class="heading-2">{{$t('Icon')}}</h2>
     <div class="line">
         <app-button icon="heart" color="primary" />
         <app-button icon="hand" color="second" />
@@ -54,7 +54,7 @@ const eventForBtn = () => {
         <app-button icon="lemon" color="warning" />
         <app-button icon="hourglass" color="danger" />
     </div>
-    <h2 class="heading-2">Icon Outlined</h2>
+    <h2 class="heading-2">{{$t('Icon Outlined')}}</h2>
     <div class="line">
         <app-button icon="heart" color="primary" :outlined="true"/>
         <app-button icon="hand" color="second" :outlined="true"/>
@@ -63,14 +63,14 @@ const eventForBtn = () => {
         <app-button icon="lemon" color="warning" :outlined="true"/>
         <app-button icon="hourglass" color="danger" :outlined="true"/>
     </div>
-    <h2 class="heading-2">Size</h2>
+    <h2 class="heading-2">{{$t('Size')}}</h2>
     <div class="line">
-        <app-button label="Normal" color="primary" />
-        <app-button label="Large" color="primary" size="large"/>
+        <app-button :label="$t('Normal')" color="primary" />
+        <app-button :label="$t('Large')" color="primary" size="large"/>
     </div>
-    <h2 class="heading-2">Event</h2>
+    <h2 class="heading-2">{{$t('Event')}}</h2>
     <div class="line">
-        <app-button label="@click" color="danger" @test="eventForBtn"/>
+        <app-button :label="$t('@click')" color="danger" @test="eventForBtn"/>
     </div>
         
 

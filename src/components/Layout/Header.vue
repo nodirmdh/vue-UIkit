@@ -1,6 +1,12 @@
+<script setup>
+
+
+</script>
+
 <template>
   <header class="header">
-    <router-link to="/" class="logo "><img src="@/assets/vue.svg" alt="" /> UI Kit </router-link>
+    <router-link to="/" class="logo "><img src="@/assets/vue.svg" alt="" /> {{$t('UI Kit')}} </router-link>
+    <slot></slot>
   </header>
 </template>
 
@@ -13,8 +19,10 @@
   height: 62px;
   display: flex;
   align-items: center;
-  z-index: 1;
-  position: relative;
+  justify-content: space-between;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
   a{
     text-decoration: none;
     font-size: 20px;

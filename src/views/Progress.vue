@@ -34,18 +34,18 @@ const removePercentCircle = () => {
 </script>
 
 <template>
-  <h1 class="heading-1">Progress</h1>
-  <h2 class="heading-2">Progress Bar</h2>
+  <h1 class="heading-1">{{$t('Progress')}}</h1>
+  <h2 class="heading-2">{{$t('Progress Bar')}}</h2>
   <div class="line line_block">
-    <app-button label="Add 10%" @click="addPercentBar"/>
-    <app-button label="Remove 10%" @click="removePercentBar"/>
+    <app-button :label="$t('Add 10%')" @click="addPercentBar"/>
+    <app-button :label="$t('Remove 10%')" @click="removePercentBar"/>
   </div>
   <progressBar maxWidth="50%" :percent="percentBar" />
   <progressBar maxWidth="50%" :percent="percentBar" color="success"/>
-  <h2 class="heading-2">Progress Circle</h2>
+  <h2 class="heading-2">{{$t('Progress Circle')}}</h2>
   <div class="line line_block">
-    <app-button label="Add 10%" @click="addPercentCircle"/>
-    <app-button label="Remove 10%" @click="removePercentCircle"/>
+    <app-button :label="$t('Add 10%')" @click="addPercentCircle"/>
+    <app-button :label="$t('Remove 10%')" @click="removePercentCircle"/>
   </div>
   <div class="line line_block">
     <progress-circle :percent="percentCircle"/>

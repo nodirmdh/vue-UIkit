@@ -1,9 +1,16 @@
 <script setup>
+import { ref } from 'vue'
 import Header from "./components/Layout/Header.vue";
 import Sidebar from "./components/Layout/Sidebar.vue";
-import { ref } from 'vue'
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n({ useScope: "global" })
 
 const isOpenMenu = ref(false)
+const switchLang = () => {
+  locale.value === 'en' ? locale.value = 'ru' : locale.value = 'en'
+  localStorage.setItem('lang', locale.value)
+}
 
 const toggleMenu = () => {
   isOpenMenu.value = !isOpenMenu.value
@@ -14,9 +21,10 @@ const toggleMenu = () => {
 <template>
   <div class="container">
     <div class="sidebar-toggle" @click="toggleMenu">&#5125;</div>
-    <Header></Header>
+    <Header> <span @click="switchLang">{{ $t('SwitchLanguage') }}</span>
+    </Header>
     <Sidebar :openSidebar="isOpenMenu"></Sidebar>
-    <div :class="['content', {content__full: !isOpenMenu}]">
+    <div :class="['content', { content__full: !isOpenMenu }]">
       <router-view />
     </div>
   </div>
@@ -28,7 +36,7 @@ const toggleMenu = () => {
 .content {
   max-width: 1400px;
   margin-left: 250px;
-  padding: 30px;
+  padding: 60px 30px;
   transition: 0.2s;
 
   &__full {
@@ -56,5 +64,4 @@ const toggleMenu = () => {
     margin-left: 0;
   }
 }
-
 </style> 
